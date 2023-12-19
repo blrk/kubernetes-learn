@@ -147,3 +147,29 @@ minikube start
  1114  k get pods
  1115  kubectl get pods
  1116  kubectl get pods -o wide
+
+1119  minikube start --nodes 2 -p multinode-demo
+ 1120  kubectl get nodes
+ 1121  kubectl describe nodes multinode-demo-m02
+ 1122  kubectl get nodes
+ 1123  kubectl label node multinode-demo-m02 disk=ssd
+ 1124  kubectl describe nodes multinode-demo-m02
+ 1125  kubectl run nginx --image=nginx --dry-run=client -o yaml
+ 1126  vi pod1.yml
+ 1127  kubectl apply -f pod1.yml 
+ 1128  kubectl get pods
+ 1129  kubectl get pods -o wide
+ 1130  kubectl get nodes
+ 1131  vi affinity1.yml
+ 1132  kubectl apply -f affinity1.yml 
+ 1133  kubectl get pods
+ 1134  kubectl delete pod service-pod
+ 1135  kubectl get pods
+ 1136  kubectl get pods -o wide
+ 1137  vi affinity1.yml
+ 1138  kubectl apply -f affinity1.yml 
+ 1139  kubectl delete pods --all
+ 1140  kubectl apply -f affinity1.yml 
+ 1141  k get pods
+ 1142  kubectl get pods
+ 1143  kubectl get pods -o wide
