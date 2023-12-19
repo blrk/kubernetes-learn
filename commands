@@ -1,0 +1,149 @@
+minikube start
+  969  minikube kubectl get nodes
+  970  minikube kubectl run --image=nginx
+  971  minikube kubectl run demo --image=nginx
+  972  minikube kubectl get nodes
+  973  minikube kubectl get all
+  974  minikube kubectl run demo-server --image=nginx
+  975  minikube dashboard
+  976  kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080
+  977  minikube kubectl get all
+  978  kubectl run pod demo --image=nginx
+  979  kubectl get pods
+  980  kubectl run pod demo --image=alpine
+  981  kubectl run pod demo1 --image=alpine
+  982  kubectl run pod demo2 --image=alpine
+  983  kubectl run demo2 --image=alpine
+  984  kubectl get all
+  985  kubectl delete pod *
+  986  kubectl delete pod demo1
+  987  kubectl get pods
+  988  kubectl delete pod demo2 pod
+  989  kubectl delete deployment deployment.apps/hello-node
+  990  kubectl delete deployments
+  991  kubectl get deployments
+  992  kubectl delete deployment hello-node
+  993  clear
+  994  kubectl proxy --port 8080
+  995  minikube start
+  996  kubectl api-resources
+  997  kubectl explain pod
+  998  kubectl run nginx --image=nginx
+  999  kubectl get pods
+ 1000  kubectl run nginxpod --image=nginx --port 8080
+ 1001  kubectl get pods
+ 1002  kubectl describe pod ngixpod
+ 1003  kubectl describe pod nginxpod
+ 1004  kubectl run nginx --image --port=80 --dry-run=client -o yaml
+ 1005  kubectl run nginx --image --port=8090 --dry-run=client -o yaml
+ 1006  kubectl run nginx --image=nginx --port=8090 --dry-run=client -o yaml
+ 1007  kubectl get pods
+ 1008  kubectl delete pods nginx nginxpod
+ 1009  kubectl get pods
+ 1010  kubectl get pods --show-labels
+ 1011  kubectl run pod-1 --image=nginx 
+ 1012  kubectl run pod-2 --image=nginx 
+ 1013  kubectl run pod-3 --image=nginx 
+ 1014  kubectl get pods
+ 1015  kubectl get pods -o wide
+ 1016  kubectl get pods --show-labels
+ 1017  kubectl label pod pod-1 env=dev
+ 1018  kubectl label pod pod-2 env=stage
+ 1019  kubectl label pod pod-2 env=prod
+ 1020  kubectl label pod pod-3 env=prod
+ 1021  kubectl get pods --show-labels
+ 1022  kubectl get pods -l env=dev
+ 1023  kubectl get pods -l env=prod
+ 1024  kubectl get pods -l env!=prod
+ 1025  kubectl get pods --show-labels
+ 1026  kubectl label pod pod-1 run-
+ 1027  kubectl get pods --show-labels
+ 1028  kubectl label pods --all status=running 
+ 1029  kubectl get pods --show-labels
+ 1030* kubectl p -all
+ 1031  kubectl delete pods --all
+ 1032  mkdir kubernetes
+ 1033  cd kubernetes/
+ 1034  vi replicaset.yaml
+ 1035  kubectl apply -f replicaset.yaml 
+ 1036  k get replicaset
+ 1037  k get nodes
+ 1038  kubectl get replicaset
+ 1039  kubectl get pod
+ 1040  kubectl get replicaset
+ 1041  kubectl get pods
+ 1042  kubectl ger rs
+ 1043  kubectl get rs
+ 1044  ls
+ 1045  cp replicaset.yaml deployment.yaml
+ 1046  vi deployment.yaml 
+ 1047  k apply -f deployment.yaml 
+ 1048  kubectl apply -f deployment.yaml 
+ 1049  k get deployments
+ 1050  kubectl get deployments
+ 1051  k get nodes
+ 1052  kubectl get nodes
+ 1053  kubectl get pods
+ 1054  vi deployment.yaml 
+ 1055  kubectl get rs
+ 1056  kubectl get deployments
+ 1057  kubectl get pods
+ 1058  kubectl apply -f deployment.yaml 
+ 1059  kubectl get rs
+ 1060  kubectl get nodes
+ 1061  kubectl get pods
+ 1062  kubectl get rs
+ 1063  kubectl describe deployments rk-deployments
+ 1064  kubectl describe deployments rk-deployment
+ 1065  kubectl get deployments
+ 1066  kubectl describe deployments rk-deployment
+ 1067  kubectl rollout history deployments/rk-deployment
+ 1068  kubectl rollout history deployments/rk-deployment --revision 1
+ 1069  kubectl rollout history deployments/rk-deployment --revision 2
+ 1070  kubectl rollout history deployments/rk-deployment --revision 3
+ 1071  kubectl rollout history deployments/rk-deployment
+ 1072  kubectl rollout undo deployment/rk-deployment --to-revision=1
+ 1073  kubectl get rs
+ 1074  kubectl describe deployment/rk-deployment 
+ 1075  kubectl create deployment mydep1 --image=nginx --dry-run -o yaml
+ 1076  kubectl create deployment mydep1 --image=nginx --replicas=3 --dry-run -o yaml
+ 1077  kubectl get deployments
+ 1078  kubectl delete deployment rk-deployment
+ 1079  k get pods
+ 1080  kubectl get pods
+ 1081  kubectl run nginx --image=nginx2
+ 1082  kubectl get pods
+ 1083  kubectl delete pods --all
+ 1084  kubectl create deployment nginx --image=nginx
+ 1085  kubectl get pods
+ 1086  kubectl delete deployment --all
+ 1087  kubectl create deployment nginx --image=nginx2
+ 1088  kubectl get pods
+ 1089  kubectl get deployment nginx -o yaml
+ 1090  kubectl set image deployment nginx nginx=nginx:1.7.9
+ 1091* kubectl set image deployment nginx nginx2=nginx:latest 
+ 1092  kubectl get pods
+ 1093  kubectl rollout histroy deployment nginx
+ 1094  kubectl get deployments
+ 1095  kubectl rollout history deployment/nginx
+ 1096  kubectl set image deployment nginx=nginx:1.7.9 --record
+ 1097  kubectl set image deployment nginx nginx=nginx:1.7.9 --record
+ 1098  kubectl set image deployment/nginx nginx=nginx:1.7.9 --record
+ 1099  kubectl set image deployment/nginx nginx2=nginx:1.7.9 --record
+ 1100  kubectl rollout history deployment/nginx
+ 1101  kubectl rollout undo deployment/nginx
+ 1102  kubectl get  pods
+ 1103  kubectl scale deployment/nginx --replicas=3
+ 1104  kubectl get  pods
+ 1105  kubectl delete deployment --all
+ 1106  kubectl get pods
+ 1107  kubectl create deployment nginx --image=nginx
+ 1108  kubectl create deployment nginx --image=nginx --dry-run=client -o yaml
+ 1109  kubectl create deployment nginx --image=nginx --port=80 --dry-run=client -o yaml
+ 1110  k get pods
+ 1111  kubectl get nodes
+ 1112  vi deamon.yaml
+ 1113  kubectl apply -f deamon.yaml 
+ 1114  k get pods
+ 1115  kubectl get pods
+ 1116  kubectl get pods -o wide
