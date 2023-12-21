@@ -1,13 +1,3 @@
-minikube start
-  969  minikube kubectl get nodes
-  970  minikube kubectl run --image=nginx
-  971  minikube kubectl run demo --image=nginx
-  972  minikube kubectl get nodes
-  973  minikube kubectl get all
-  974  minikube kubectl run demo-server --image=nginx
-  975  minikube dashboard
-  976  kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080
-  977  minikube kubectl get all
   978  kubectl run pod demo --image=nginx
   979  kubectl get pods
   980  kubectl run pod demo --image=alpine
