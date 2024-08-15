@@ -9,7 +9,7 @@ openssl genrsa -out ec2-user.key 2048
 ```
 * Create a certificate signing request. username (CN), group(O)
 ```bash
-openssl req -new -key ec2-user.key -out ec2-user.csr -subj "/CN=ec-user/O=cka-preparation"
+openssl req -new -key ec2-user.key -out ec2-user.csr -subj "/CN=ec2-user/O=cka-preparation"
 ```
 * Sign the CSR with the k8s cluster certificate authority. Usually present in /etc/kubernetes/pki. Need to ahve ca.crt and ca.key
 ```bash
