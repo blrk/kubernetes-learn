@@ -62,7 +62,7 @@ spec:
             claimName: my-pvc
 ```
 * Create service
-  ```bash
+```bash
 apiVersion: v1
 kind: Service
 metadata:
@@ -76,4 +76,4 @@ spec:
       port: 5432 
       targetPort: 5432 
   type: ClusterIP 
- ```
+```
